@@ -1,0 +1,337 @@
+<!DOTYPE html>
+<html>
+  <head>
+    <meta charset="ut f-8" />
+    <title>个人笔记</title>
+
+    <script type="text/javascript" src="/myScript.js"></script>
+    <script>
+      function alertFunction() {
+        alert("Hello");
+      }
+    </script>
+    <script>
+      function dateFunction() {
+        document.write(Date());
+      }
+    </script>
+  </head>
+  <body>
+    <h1>This is my frist JS app</h1>
+
+    <p style="color: orangered">10/09/2020 Note!!!!!!!</p>
+
+    <!-- 显示日期！！！！！ -->
+    <script>
+      function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+      }
+    </script>
+    <p id="demo">Click the below botton to check the Date</p>
+    <button type="button" onclick="displayDate()">Check The Date</button>
+
+    <!-- 显示Email！！！！！ -->
+    <p>Click the botton to see my Email</p>
+    <button type="button" onclick="alert('lyudingguangnz@outlook.com')">
+      Click ME
+    </button>
+
+    <!-- 改变HTMl的元素内容 -->
+    <p id="change">JavaScript 能改变 HTML 元素的内容。</p>
+    <script>
+      function myFunction() {
+        x = document.getElementById("change");
+        x.innerHTML = "Hello user!!!!!";
+      }
+    </script>
+    <button type="button" onclick="myFunction()">
+      Click To Change The Text!!!!!
+    </button>
+
+    <!-- 点亮灯泡和关闭≥ -->
+    <!-- <script>
+      function activeImage() {
+        y = document.getElementById("light");
+        if (y.src.match("bulbon")) {
+          y.src = "/1.png";
+        } else {
+          y.src = "/1.png";
+        }
+      }
+    </script>
+    <img
+      id="light"
+      onclick="activeImage()"
+      src="/1.png"
+      width="100"
+      height="180"
+    />
+    <p>Please click the botton to control the light.</p> -->
+
+    <!-- 创建改变颜色 -->
+    <p id="yanse">Change color to Red</p>
+    <script>
+      function colorFunction() {
+        z = document.getElementById("yanse");
+        z.style.color = "#ff0000";
+      }
+    </script>
+    <button type="button" onclick="colorFunction()">Click Here</button>
+
+    <!-- 输入框 判断输入的内容是否是数字-->
+    <p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+    <input id="shuru" type="text" />
+    <script>
+      function shuruFunction() {
+        var x = document.getElementById("shuru").value;
+        if (x == "" || isNaN(x)) {
+          alert("Not a Number!!!!");
+        }
+      }
+    </script>
+    <button type="button" onclick="shuruFunction()">Click Here</button>
+
+    <!-- 输入  判断正则表达式 -->
+    <p>利用正则表达式去判断空格之类的符号</p>
+    <input id="shuru1" type="text" />
+    <script>
+      function shuru1Function() {
+        var a = document.getElementById("shuru1").value;
+        if (isNaN(a) || a.replace(/(^\s*)|(\s*$)/g, "") == "") {
+          alert("Please check your input");
+        }
+      }
+    </script>
+    <button type="button" onclick="shuru1Function()">
+      Click to check the input!!
+    </button>
+
+    <p>------------------------------------------------------------</p>
+    <p style="color: orangered">11/09/2020 Note!!!!!!!</p>
+
+    <h1>My web App</h1>
+    <p id="111">A Paragraph.</p>
+    <button type="button" onclick="my_Function()">Click ME !!!!!!</button>
+    <img src="/1.png" width="100" height="100" />
+
+    <h2>尝试修改innerHTMl去修改HTMl</h2>
+    <p id="duanluo">我的第一个段落。</p>
+    <script>
+      document.getElementById("duanluo").innerHTML = "段落已修改。";
+    </script>
+    <p style="color: lime">利用 Document.Write 去显示日期！</p>
+    <script>
+      document.write(Date());
+    </script>
+    <br />
+    <button onclick="datefunction()">Click to check the Date</button>
+    <script>
+      function datefunction() {
+        document.write(Date());
+      }
+    </script>
+
+    <p style="color: teal">
+      利用浏览器Chrome 中的 F12 来启用调试模式， 在调试窗口中点击 "Console"
+      菜单。
+    </p>
+    <script>
+      a = 1;
+      b = 5;
+      c = a + b;
+      console.log(c);
+    </script>
+
+    <!-- 我在这里实现了两个按键，可以自由的切换显示的结果。 -->
+    <p style="color: lime">关于 JS的语句</p>
+    <p id="d1">我的第一个段落。</p>
+    <p id="d2">我的第二个段落。</p>
+    <p id="d3">我的第三个段落。</p>
+    <p>
+      <button type="button" onclick="nameFunction()">Click</button>
+    </p>
+    <script>
+      function nameFunction() {
+        document.getElementById("d1").innerHTML = "你好 Given!!!!";
+        document.getElementById("d2").innerHTML = "你好 Concordia!!!!";
+        document.getElementById("d3").innerHTML = "你好 Michael!!!!";
+      }
+    </script>
+    <!-- 在这里进行代码的重写 -->
+    <p>
+      <button type="button" onclick="name1Function()">Click</button>
+    </p>
+    <script>
+      function name1Function() {
+        document.getElementById("d1").innerHTML = "我的第一个段落。";
+        document.getElementById("d2").innerHTML = "我的第二个段落。";
+        document.getElementById("d3").innerHTML = "我的第三个段落。";
+      }
+    </script>
+    <p>-----------------------------------------------------------------</p>
+    <!--  -->
+    <p>假设 y=5，计算 x=y+2，并显示结果。</p>
+    <button onclick="myFunction()">点击这里</button>
+    <p id="demo"></p>
+    <script>
+      function myFunction() {
+        var y = 5;
+        var x = y + 2;
+        var demoP = document.getElementById("demo");
+        demoP.innerHTML = "x=" + x;
+      }
+    </script>
+    <p>-----------------------------------------------------------------</p>
+    <p style="color: orangered">12/09/2020 Note!!!!!!!</p>
+    <div id="biji_12_09">
+      1. ECMAScript 与JavaScript 是一个东西; <br />
+      2. Dom 是文档对象模型，学习如何通过JS去操作网页。<br />
+      3. Bom是浏览器对象模型，学习如何通过JS去操作浏览器。 <br />
+      4. alert 是弹出警告框。 <br />
+      5. document.write 是往Body里写内容。<br />
+    </div>
+    <p>-----------------------------------------------------------------</p>
+    <p style="color: orangered">14/09/2020 Note!!!!!!!</p>
+    <div>
+      1. 定义对象，可以通过 Var = 。。。。 ， 的方式来进行赋值，
+      也可以存到数组里面。<br />
+      2. 有两种方式可以访问对象属性: 你可以使用 .property 或 ["property"]。<br />
+    </div>
+    <p id="xinxi"></p>
+    <script>
+      var car = {
+        brand: "BMW",
+        color: "White",
+        id: 111,
+        door: 4,
+      };
+      document.getElementById("xinxi").innerHTML =
+        car["brand"] + "和" + car.color;
+    </script>
+    <p style="color: lime">
+      对象方法作为一个函数定义存储在对象属性中。 利用fullName
+      这个Function去调用方程。
+    </p>
+    <p style="color: lime">对象方法是一个函数定义,并作为一个属性值存储。</p>
+    <p id="xinming"></p>
+    <script>
+      var detail = {
+        firstName: "Dingguang",
+        lastName: "Lyu",
+        age: 24,
+        height: "180cm",
+        fullName: function () {
+          return "detail: " + this.firstName + " " + this.lastName;
+        },
+      };
+      document.getElementById("xinming").innerHTML = detail.fullName();
+    </script>
+    <button onclick="alertFunction()">点我， 谢谢！！！</button>
+    <button onclick="dateFunction()">CLick to check the Date.</button>
+
+    <p>点击这个按钮，来调用带参数的函数。</p>
+    <button onclick="my1Function('Harry Potter','Wizard')">
+      点击这里去查看用户1
+    </button>
+    <button onclick="my1Function('DIngguan Lyu','Web Developer')">
+      点击这里去查看用户2
+    </button>
+    <button onclick="my1Function('Concordia','accounter')">
+      点击这里去查看用户3
+    </button>
+    <script>
+      function my1Function(name, job) {
+        alert("Welcome " + name + ", the " + job);
+      }
+    </script>
+    <p>本例调用的函数会执行一个计算，然后返回结果：</p>
+    <p id="jisuan"></p>
+    <script>
+      function jisuanFunction(a, b) {
+        return a * b;
+      }
+      document.getElementById("jisuan").innerHTML = jisuanFunction(5, 6);
+    </script>
+
+    <p style="color: lime">JavaScript 局部作用域</p>
+    <p id="carName"></p>
+
+    <script>
+      var carName = "";
+
+      document.getElementById("carName").innerHTML = myFunction(
+        "carName 的类型是：" + typeof carName
+      );
+      function myFunction() {
+        return (carName = "Volvo");
+      }
+    </script>
+
+    <p>-----------------------------------------------------------------</p>
+    <p style="color: orangered">15/09/2020 Note!!!!!!!</p>
+    <p>1. Function 名不可以🙅重复</p>
+    <p id="xianshi1"></p>
+    <script>
+      my2Function();
+      document.getElementById("xianshi1").innerHTML = "我可以显示 " + carName;
+      function my2Function() {
+        carName = "Volvo";
+      }
+    </script>
+    <p id="xianshi3"></p>
+    <script>
+      my3Function();
+      document.getElementById("xianshi3").innerHTML =
+        "我可以显示 " + window.car_Name;
+      function my3Function() {
+        car_Name = "BMW";
+      }
+    </script>
+    <button onclick="getElementById('showtime').innerHTML = Date()">
+      现在的时间是?
+    </button>
+    <p id="showtime"></p>
+    <button onclick="this.innerHTML = Date()">~~~~ Time? ~~~~</button>
+
+    <br />
+
+    <button onclick="displayDate()">
+      点击按钮执行 <em>displayDate()</em> 函数.
+    </button>
+    <script>
+      function displayDate() {
+        document.getElementById("displaytime").innerHTML = Date();
+      }
+    </script>
+    <p id="displaytime"></p>
+
+    <br />
+
+    <script>
+      var txt = "ewuhdhduwh";
+      document.write("<p>" + txt.length + "</p>");
+      txt = "ewdsheep";
+      document.write("<p>" + txt.length + "</p>");
+    </script>
+    <p id="xianshi4"></p>
+    <script>
+      var x = "Dingguang Lyu"; // x是一个字符串
+      var y = new String("Dingguang Lyu"); // y是一个对象
+      document.getElementById("xianshi4").innerHTML = typeof x + " " + typeof y;
+    </script>
+
+    <br />
+
+    <p>设置 y=10, 计算出 x=y*2, 并输出结果。</p>
+    <button onclick="my5Function()">Click to see the result</button>
+    <p id="cal"></p>
+    <script>
+      function my5Function() {
+        var y = 10;
+        var x = y * 2;
+        var demoP = document.getElementById("cal");
+        demoP.innerHTML = "x=" + x;
+      }
+    </script>
+  </body>
+</html>
